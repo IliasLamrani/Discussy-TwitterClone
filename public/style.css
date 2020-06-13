@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    transition: 0.5s;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+
+}
+
+header img {
+    height: 100px;
+}
+
+h1 {
+    font-family: 'Arvo', serif;
+    color: rgb(54, 145, 187);
+    transition: 0.4s;
+    font-size: 50px;
+}
+
+h4 {
+    color: grey;
+}
+
+#user-input {
+    width: 50%;
+    margin: auto;
+    margin-top: 100px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    padding: 10px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    box-shadow: 1px 1px 10px grey;
+    outline: none;
+}
+
+textarea {
+    height: 200px;
+}
+
+button {
+    outline: none;
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 40px;
+    background: rgb(54, 145, 187);
+    transition: 0.4s;
+    color: white;
+    box-shadow: 1px 1px 10px grey;
+    opacity: 0.8;
+}
+
+form button {
+    width: 30%;
+}
+
+button:hover {
+    box-shadow: 5px 5px 8px grey;
+    opacity: 1;
+}
+
+#talk-button:hover {
+    width: 33%;
+}
+
+#loading-ball {
+    display: flex;
+    justify-content: center;
+}
+
+#tweet-list {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tweet img {
+    height: 50px;
+    position: absolute;
+    margin-left: -70px;
+}
+
+.tweet {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px 0px 20px 100px;
+    box-shadow: 1px 1px 10px lightgrey;
+    width: 50%;
+    overflow: auto;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* ----- DARK MODE ----- */
+
+.dark-mode-input {
+    box-shadow: 1px 1px 10px lightgrey;
+}
+
+.dark-mode-title {
+    color: white;
+}
+
+.dark-mode-button {
+    color: white;
+    background-color: rgb(37, 36, 35);
+}
+
+.dark-mode-button:hover {
+    box-shadow: 5px 5px 8px white;
+}
