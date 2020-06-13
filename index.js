@@ -1,11 +1,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const tweetModel = require('./models/Tweet');
+const Filter = require('bad-words');
+
 require('dotenv').config();
 
 const app = express();
-
-
+const filter = new Filter();
 const port = process.env.PORT || 3000;
 const database = process.env.DB_URL;
 
@@ -35,8 +36,8 @@ app.post('/api', (req, res) => {
     
     const tweet = new tweetModel;
 
-    tweet.name = req.body.name.toString();
-    tweet.message = req.body.message.toString();
+    tweet.name = filter.clean(req.body.name.toString());
+    tweet.message = filter.clean(req.body.message.toString());
 
     if (isStringCorrect(tweet.name, tweet.message)) {
         tweet.save(function (err, docs) {
