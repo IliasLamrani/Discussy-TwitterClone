@@ -14,7 +14,7 @@ const database = process.env.DB_URL;
 
 
 // PORT AND DB CONNECTION
-app.listen(port, () => console.log('server running on port 3000'));
+app.listen(port, () => console.log(`server running on port ${port}`));
 
 mongoose.connect(database,
      { useNewUrlParser: true, useUnifiedTopology: true },
@@ -57,7 +57,7 @@ app.post('/api', (req, res) => {
     }
 });
 
-//GET AND SEND ALL TWEETS WITH DB
+//GET AND SEND ALL TWEETS TO CLIENT
 app.get('/serv', (req, res) => {
     tweetModel.find({}, function(err, tweets) {
         if (err) {

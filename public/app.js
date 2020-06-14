@@ -4,7 +4,6 @@ const DOMStrings = {
     nightButton: document.getElementById('night-mode'),
     talkButton: document.getElementById('talk-button'),
     title: document.querySelector('h1'),
-    header: document.querySelector('header'),
     name: document.querySelector('input'),
     message: document.querySelector('textarea'),
     ball: document.getElementById('loading-ball'),
